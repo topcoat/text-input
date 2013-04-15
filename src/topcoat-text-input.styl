@@ -1,0 +1,39 @@
+@import input-mixin
+@import variables-shared
+
+/*
+ Inputs - Single Line Text
+
+ Applying ".*-text-input" to text-based form input elements such as "text", "search", or
+ "email" input element adds base styling.
+
+	.large-text-input - larger-sized elements that match the height of a ".large-button".
+
+	<input type="text" class="dark-text-input {{modifier}}" value="" placeholder="Text input goes here">
+	<input type="text" class="light-text-input {{modifier}}" value="" placeholder="Text input goes here">
+	<input type="search" class="dark-text-input {{modifier}}" value="" placeholder="Text input goes here">
+	<input type="search" class="light-text-input {{modifier}}" value="" placeholder="Text input goes here">
+
+*/
+
+.light-text-input,
+.dark-text-input
+	input-base()
+
+@import topcoat-dark-text-input
+
+@import topcoat-light-text-input
+
+.dark-text-input:focus,
+.light-text-input:focus
+	background-color #ffffff
+	color #000
+
+.dark-text-input:focus::-webkit-input-placeholder,
+.light-text-input:focus::-webkit-input-placeholder
+	color var-placeholder-color--input
+
+.large-text-input
+	height 4rem
+	font 1.3rem "Source Sans", helvetica, arial, sans-serif
+	font-weight 200
