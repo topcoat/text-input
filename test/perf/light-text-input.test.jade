@@ -1,0 +1,9 @@
+- var repeats = 200
+doctype 5
+html
+	head
+		title TopCoat icon-button perf test
+		link(rel='stylesheet', type='text/css', href='../../release/css/topcoat-text-input.min.css')
+	body
+		- while (repeats--)
+			input(type='text', class='light-text-input', placeholder='Small Input')
