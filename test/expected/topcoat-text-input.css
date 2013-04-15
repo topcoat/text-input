@@ -14,21 +14,24 @@ limitations under the License.
 */
 
 /*
-Inputs - Single Line Text
+ TopCoat Text Input
+ -------------------
 
-Applying ".*-text-input" to text-based form input elements such as "text", "search", or
+Applying "topcoat-text-input" to text-based form input elements such as "text", "search", or
 "email" input element adds base styling.
 
-.large-text-input - larger-sized elements that match the height of a ".large-button".
+.topcoat-text-input--large - larger-sized elements that match the height of a ".large-button".
 
-<input type="text" class="dark-text-input {{modifier}}" value="" placeholder="Text input goes here">
-<input type="text" class="light-text-input {{modifier}}" value="" placeholder="Text input goes here">
-<input type="search" class="dark-text-input {{modifier}}" value="" placeholder="Text input goes here">
-<input type="search" class="light-text-input {{modifier}}" value="" placeholder="Text input goes here">
+<input type="text" class="topcoat-text-input {{modifier}}" value="" placeholder="Text input goes here">
+<input type="text" class="topcoat-text-input {{modifier}}" value="" placeholder="Text input goes here">
+
+:disabled - Disabled state
+
+.is-disabled - Simulates a disabled state on mobile devices
 
 */
-.light-text-input,
-.dark-text-input {
+.topcoat-text-input,
+.topcoat-text-input--large {
   vertical-align: top;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -40,34 +43,40 @@ Applying ".*-text-input" to text-based form input elements such as "text", "sear
   font: 1em "Source Sans", helvetica, arial, sans-serif;
   font-weight: 200;
   outline: none;
-}
-.dark-text-input {
-  border: 1px solid #2f3233;
-  background-color: #424546;
-  box-shadow: inset 0 1px rgba(255,255,255,0.12);
-  color: #b9bbbc;
-}
-.light-text-input {
   border: 1px solid #a5a8a8;
   background-color: #f2f3f3;
   box-shadow: inset 0 1px rgba(0,0,0,0.12);
   color: #454545;
 }
-.dark-text-input:focus,
-.light-text-input:focus {
+.topcoat-text-input:focus {
   background-color: #fff;
   color: #000;
 }
-.dark-text-input:focus::-webkit-input-placeholder,
-.light-text-input:focus::-webkit-input-placeholder {
-  color: #c6c8c8;
+.topcoat-text-input:focus::-webkit-input-placeholder {
+  color: var-placeholder-color--input;
 }
-.large-text-input {
+.topcoat-text-input:disabled,
+.topcoat-text-input.is-disabled {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}
+/*
+ TopCoat Large Icon Button
+ -------------------
+
+:disabled - Disabled state
+
+.is-disabled - Simulates a disabled state on mobile devices
+
+*/
+.topcoat-text-input--large {
   height: 4rem;
   font: 1.3rem "Source Sans", helvetica, arial, sans-serif;
   font-weight: 200;
 }
-.disabled {
+.topcoat-text-input--large.is-disabled,
+.topcoat-text-input--large:disabled {
   opacity: 0.3;
   cursor: default;
   pointer-events: none;

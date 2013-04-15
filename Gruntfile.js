@@ -1,15 +1,6 @@
 /*global module:false*/
 module.exports = function(grunt) {
 
-    var getStylusPathData = function(grunt) {
-            var controlsPath  = grunt.file.expand('tmp/src/controls/**/src/mixins'),
-                themePath     = grunt.file.expand('tmp/src/controls/**/src'),
-                utilsPath     = grunt.file.expand('tmp/src/utils/**/src/mixins'),
-                variablesPath = 'test/fixtures',
-                pathData      = [variablesPath];
-
-            return pathData.concat(controlsPath, utilsPath, themePath);
-        };
 
     // Project configuration.
     grunt.initConfig({
@@ -40,24 +31,17 @@ module.exports = function(grunt) {
 
         clean: {
             tmp: ['tmp'],
-            zip: [
-                    'tmp/src/*.zip',
-                    'tmp/src/controls/*.zip',
-                    'tmp/src/skins/*.zip',
-                    'tmp/src/utils/*.zip',
-                    'tmp/src/theme/*.zip'
-                ]
+            zip: ['tmp/src/*.zip', 'tmp/src/controls/*.zip', 'tmp/src/skins/*.zip', 'tmp/src/utils/*.zip']
         },
 
-        stylus: {
-            compile: {
+        compile: {
+            stylus: {
                 options: {
-                    paths: getStylusPathData(grunt),
-                    import: ['input-mixin', 'utils', 'variables-dark', 'variables-light'],
+                    import: ['input-mixin', 'utils', 'variables'],
                     compress: false
                 },
                 files: {
-                    'release/css/topcoat-text-input.css': ['src/copyright.styl', 'src/topcoat-text-input.styl']
+                    'release/css/topcoat-text-input.css': ['src/copyright.styl', 'src/topcoat-text-input.styl', 'test/fixtures/icon.styl']
                 }
             }
         },
@@ -100,8 +84,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
 
+    grunt.loadTasks('tasks');
+
     // Default task.
     grunt.registerTask('default', ['clean', 'topcoat', 'build']);
-    grunt.registerTask('build', ['stylus', 'cssmin', 'jade', 'nodeunit']);
+    grunt.registerTask('build', ['compile', 'cssmin', 'jade', 'nodeunit']);
 
 };

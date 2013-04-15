@@ -1,43 +1,58 @@
 @import input-mixin
 @import utils
-@import variables-shared
 
 /*
-Inputs - Single Line Text
+ TopCoat Text Input
+ -------------------
 
-Applying ".*-text-input" to text-based form input elements such as "text", "search", or
+Applying "topcoat-text-input" to text-based form input elements such as "text", "search", or
 "email" input element adds base styling.
 
-.large-text-input - larger-sized elements that match the height of a ".large-button".
+.topcoat-text-input--large - larger-sized elements that match the height of a ".large-button".
 
-<input type="text" class="dark-text-input {{modifier}}" value="" placeholder="Text input goes here">
-<input type="text" class="light-text-input {{modifier}}" value="" placeholder="Text input goes here">
-<input type="search" class="dark-text-input {{modifier}}" value="" placeholder="Text input goes here">
-<input type="search" class="light-text-input {{modifier}}" value="" placeholder="Text input goes here">
+<input type="text" class="topcoat-text-input {{modifier}}" value="" placeholder="Text input goes here">
+<input type="text" class="topcoat-text-input {{modifier}}" value="" placeholder="Text input goes here">
+
+:disabled - Disabled state
+
+.is-disabled - Simulates a disabled state on mobile devices
 
 */
 
-.light-text-input,
-.dark-text-input
+.topcoat-text-input
 	input-base()
+	border var-border
+	background-color var-background-color
+	box-shadow var-box-shadow--down
+	color var-color
 
-@import topcoat-dark-text-input
+.topcoat-text-input:focus
+	background-color var-text-input-background--focus
+	color var-text-input-color--focus
 
-@import topcoat-light-text-input
-
-.dark-text-input:focus,
-.light-text-input:focus
-	background-color #ffffff
-	color #000
-
-.dark-text-input:focus::-webkit-input-placeholder,
-.light-text-input:focus::-webkit-input-placeholder
+.topcoat-text-input:focus::-webkit-input-placeholder
 	color var-placeholder-color--input
 
-.large-text-input
-	height 4rem
-	font 1.3rem "Source Sans", helvetica, arial, sans-serif
-	font-weight 200
+.topcoat-text-input:disabled,
+.topcoat-text-input.is-disabled
+	disabled()
 
-.disabled
+/*
+ TopCoat Large Icon Button
+ -------------------
+
+:disabled - Disabled state
+
+.is-disabled - Simulates a disabled state on mobile devices
+
+*/
+
+.topcoat-text-input--large
+	@extend .topcoat-text-input
+	height var-text-input-height--large
+	font var-text-input-font--large
+	font-weight var-text-input-font-weight--large
+
+.topcoat-text-input--large.is-disabled,
+.topcoat-text-input--large:disabled
 	disabled()
