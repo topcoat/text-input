@@ -14,17 +14,17 @@ limitations under the License.
 */
 
 /*
- Inputs - Single Line Text
+Inputs - Single Line Text
 
- Applying ".*-text-input" to text-based form input elements such as "text", "search", or
- "email" input element adds base styling.
+Applying ".*-text-input" to text-based form input elements such as "text", "search", or
+"email" input element adds base styling.
 
-  .large-text-input - larger-sized elements that match the height of a ".large-button".
+.large-text-input - larger-sized elements that match the height of a ".large-button".
 
-  <input type="text" class="dark-text-input {{modifier}}" value="" placeholder="Text input goes here">
-  <input type="text" class="light-text-input {{modifier}}" value="" placeholder="Text input goes here">
-  <input type="search" class="dark-text-input {{modifier}}" value="" placeholder="Text input goes here">
-  <input type="search" class="light-text-input {{modifier}}" value="" placeholder="Text input goes here">
+<input type="text" class="dark-text-input {{modifier}}" value="" placeholder="Text input goes here">
+<input type="text" class="light-text-input {{modifier}}" value="" placeholder="Text input goes here">
+<input type="search" class="dark-text-input {{modifier}}" value="" placeholder="Text input goes here">
+<input type="search" class="light-text-input {{modifier}}" value="" placeholder="Text input goes here">
 
 */
 .light-text-input,
