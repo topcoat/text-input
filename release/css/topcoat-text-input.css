@@ -17,24 +17,18 @@ limitations under the License.
  TopCoat Text Input
  -------------------
 
-Applying "topcoat-text-input" to text-based form input elements such as "text", "search", or
-"email" input element adds base styling.
-
-.topcoat-text-input--large - larger-sized elements that match the height of a ".large-button".
-
-<input type="text" class="topcoat-text-input {{modifier}}" value="" placeholder="Text input goes here">
-<input type="text" class="topcoat-text-input {{modifier}}" value="" placeholder="Text input goes here">
+TopCoat text input control
 
 :disabled - Disabled state
-
 .is-disabled - Simulates a disabled state on mobile devices
+
+    <input type="text" class="topcoat-text-input" value="" placeholder="Text input goes here">
+    <input type="text" class="topcoat-text-input is-disabled" value="" placeholder="Text input goes here">
 
 */
 .topcoat-text-input,
 .topcoat-text-input--large {
   vertical-align: top;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0 20px;
   border-radius: 6px;
@@ -52,9 +46,6 @@ Applying "topcoat-text-input" to text-based form input elements such as "text", 
   background-color: #fff;
   color: #000;
 }
-.topcoat-text-input:focus::-webkit-input-placeholder {
-  color: var-placeholder-color--input;
-}
 .topcoat-text-input:disabled,
 .topcoat-text-input.is-disabled {
   opacity: 0.3;
@@ -62,18 +53,25 @@ Applying "topcoat-text-input" to text-based form input elements such as "text", 
   pointer-events: none;
 }
 /*
- TopCoat Large Icon Button
- -------------------
+ TopCoat Large Text Input
+ ------------------------
+
+TopCoat large text input control
 
 :disabled - Disabled state
-
 .is-disabled - Simulates a disabled state on mobile devices
 
+    <input type="text" class="topcoat-text-input--large" value="" placeholder="Text input goes here">
+    <input type="text" class="topcoat-text-input--large is-disabled" value="" placeholder="Text input goes here">
 */
 .topcoat-text-input--large {
   height: 4rem;
   font: 1.3rem "Source Sans", helvetica, arial, sans-serif;
   font-weight: 200;
+}
+.topcoat-text-input--large:focus {
+  background-color: #fff;
+  color: #000;
 }
 .topcoat-text-input--large.is-disabled,
 .topcoat-text-input--large:disabled {

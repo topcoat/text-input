@@ -5,17 +5,13 @@
  TopCoat Text Input
  -------------------
 
-Applying "topcoat-text-input" to text-based form input elements such as "text", "search", or
-"email" input element adds base styling.
-
-.topcoat-text-input--large - larger-sized elements that match the height of a ".large-button".
-
-<input type="text" class="topcoat-text-input {{modifier}}" value="" placeholder="Text input goes here">
-<input type="text" class="topcoat-text-input {{modifier}}" value="" placeholder="Text input goes here">
+TopCoat text input control
 
 :disabled - Disabled state
-
 .is-disabled - Simulates a disabled state on mobile devices
+
+    <input type="text" class="topcoat-text-input" value="" placeholder="Text input goes here">
+    <input type="text" class="topcoat-text-input is-disabled" value="" placeholder="Text input goes here">
 
 */
 
@@ -30,21 +26,21 @@ Applying "topcoat-text-input" to text-based form input elements such as "text", 
 	background-color var-text-input-background--focus
 	color var-text-input-color--focus
 
-.topcoat-text-input:focus::-webkit-input-placeholder
-	color var-placeholder-color--input
-
 .topcoat-text-input:disabled,
 .topcoat-text-input.is-disabled
 	disabled()
 
 /*
- TopCoat Large Icon Button
- -------------------
+ TopCoat Large Text Input
+ ------------------------
+
+TopCoat large text input control
 
 :disabled - Disabled state
-
 .is-disabled - Simulates a disabled state on mobile devices
 
+    <input type="text" class="topcoat-text-input--large" value="" placeholder="Text input goes here">
+    <input type="text" class="topcoat-text-input--large is-disabled" value="" placeholder="Text input goes here">
 */
 
 .topcoat-text-input--large
@@ -52,6 +48,10 @@ Applying "topcoat-text-input" to text-based form input elements such as "text", 
 	height var-text-input-height--large
 	font var-text-input-font--large
 	font-weight var-text-input-font-weight--large
+
+.topcoat-text-input--large:focus
+	background-color var-text-input-background--focus
+	color var-text-input-color--focus
 
 .topcoat-text-input--large.is-disabled,
 .topcoat-text-input--large:disabled
