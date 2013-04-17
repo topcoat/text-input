@@ -30,11 +30,11 @@ TopCoat text input control
 .topcoat-text-input--large {
   vertical-align: top;
   box-sizing: border-box;
-  padding: 0 20px;
+  padding: 0 1.25rem;
   border-radius: 6px;
   margin: 5px;
-  height: 3em;
-  font: 1em "Source Sans", helvetica, arial, sans-serif;
+  height: 3rem;
+  font: inherit;
   font-weight: 200;
   outline: none;
   border: 1px solid #a5a8a8;
@@ -66,8 +66,7 @@ TopCoat large text input control
 */
 .topcoat-text-input--large {
   height: 4rem;
-  font: 1.3rem "Source Sans", helvetica, arial, sans-serif;
-  font-weight: 200;
+  font-size: 1.3rem;
 }
 .topcoat-text-input--large:focus {
   background-color: #fff;
