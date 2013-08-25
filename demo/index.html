@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Topcoat</title>
+    <meta name="viewport" content="user-scalable=no,initial-scale = 1.0,maximum-scale = 1.0">
+    <link rel="stylesheet" type="text/css" href="fonts/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="../css/topcoat-text-input.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/brackets.css"><!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  </head>
+  <body class="light">
+    <div id="wrapper">
+      <div class="max-width">
+        <div id="sideNav">
+          <nav class="site">
+            <ul>
+              <li><a href="http://topcoat.io">Home</a></li>
+            </ul>
+          </nav>
+          <div class="combo">
+            <select class="docNav">
+              <option value="index.html" selected="selected">Topcoat Text Input</option>
+            </select>
+          </div>
+          <div id="pageNav">
+            <ul>
+              <li><a href="#text-input">Text Input</a></li>
+              <li><a href="#text-input">Text Input</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="site">
+        <header id="main-header">
+          <div class="max-width">
+            <hgroup>
+              <h1><a href="http://topcoat.io">Topcoat</a></h1>
+              <p>CSS for clean and fast web apps</p>
+            </hgroup>
+            <nav>
+              <ul>
+              </ul>
+            </nav><a id="slide-menu-button" class="topcoat-icon-button--large--quiet"><span class="topcoat-icon--large topcoat-icon--menu-stack"></span></a>
+          </div>
+        </header>
+        <div id="content" class="max-width">
+          <article id="text-input" class="component">
+            <header>
+              <h2>Text Input</h2>
+            </header>
+            <section class="component"><input type="text" class="topcoat-text-input" value="" placeholder="text"><input type="text" class="topcoat-text-input" value="" placeholder="text" disabled></section>
+            <footer>
+              <div class="showcode"><a href="#">Show code snippets</a></div>
+              <section class="code">
+                <div>
+                  <h3>HTML</h3>
+                  <pre class="html"><code data-language="html">&lt;input type=&quot;text&quot; class=&quot;topcoat-text-input&quot; value=&quot;&quot; placeholder=&quot;text&quot;&gt;&lt;input type=&quot;text&quot; class=&quot;topcoat-text-input&quot; value=&quot;&quot; placeholder=&quot;text&quot; disabled&gt;</code></pre>
+                </div>
+                <div>
+                  <h3>CSS</h3>
+                  <pre class="css"><code data-language="css">.topcoat-text-input,
+.topcoat-text-input--large {
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+  box-sizing: border-box;
+  background-clip: padding-box;
+  vertical-align: top;
+  outline: none;
+  height: 3rem;
+  padding: 0 1.25rem;
+  border: 1px solid #a5a8a8;
+  border-radius: 6px;
+  background-color: #e5e9e8;
+  box-shadow: inset 0 1px rgba(0,0,0,0.12);
+  color: #454545;
+}
+.topcoat-text-input:focus {
+  background-color: #fff;
+  color: #000;
+}
+.topcoat-text-input:disabled {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}</code></pre>
+                </div>
+              </section>
+            </footer>
+          </article>
+          <article id="text-input" class="component">
+            <header>
+              <h2>Text Input</h2>
+            </header>
+            <section class="component"><input type="text" class="topcoat-text-input--large" value="" placeholder="text"><input type="text" class="topcoat-text-input--large" value="" placeholder="text" disabled></section>
+            <footer>
+              <div class="showcode"><a href="#">Show code snippets</a></div>
+              <section class="code">
+                <div>
+                  <h3>HTML</h3>
+                  <pre class="html"><code data-language="html">&lt;input type=&quot;text&quot; class=&quot;topcoat-text-input--large&quot; value=&quot;&quot; placeholder=&quot;text&quot;&gt;&lt;input type=&quot;text&quot; class=&quot;topcoat-text-input--large&quot; value=&quot;&quot; placeholder=&quot;text&quot; disabled&gt;</code></pre>
+                </div>
+                <div>
+                  <h3>CSS</h3>
+                  <pre class="css"><code data-language="css">.topcoat-text-input--large {
+  height: 4rem;
+  font-size: 1.3rem;
+}
+.topcoat-text-input--large:focus {
+  background-color: #fff;
+  color: #000;
+}
+.topcoat-text-input--large.is-disabled {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}
+</code></pre>
+                </div>
+              </section>
+            </footer>
+          </article>
+        </div>
+        <footer></footer>
+      </div>
+    </div>
+    <script src="//use.edgefonts.net/source-sans-pro:n3,n4,n6;source-code-pro:n4.js"></script>
+    <script src="js/rainbow-custom.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
