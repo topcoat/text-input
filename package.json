@@ -33,7 +33,9 @@
     "grunt-contrib-clean": "~0.4.0",
     "grunt-contrib-cssmin": "~0.6.0",
     "grunt-simple-mocha": "~0.4.0",
-    "grunt-contrib-copy": "~0.4.1"
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-topdoc": "~0.1.0",
+    "topdoc-theme": "~0.2.2"
   },
   "dependencies": {
     "topcoat-utils": "~0.1.1",
