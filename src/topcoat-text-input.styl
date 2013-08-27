@@ -41,6 +41,8 @@
 .topcoat-text-input:focus
   background-color var-background-color--focus
   color var-color--focus
+  border var-border--focus
+  box-shadow var-box-shadow--focus
 
 .topcoat-text-input--large
   @extend .topcoat-text-input
@@ -48,5 +50,5 @@
   font-size var-font-size--large
 
 .topcoat-text-input--large:focus
-  background-color var-background-color--focus
-  color var-color--focus
+  @extend .topcoat-text-input:focus
+

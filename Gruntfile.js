@@ -86,8 +86,8 @@ module.exports = function(grunt) {
             usageguides: {
                 options: {
                     source: 'css',
-                    destination: "test/component",
-                    template: "node_modules/topdoc-theme/",
+                    destination: 'demo',
+                    template: 'node_modules/topdoc-theme/',
                     templateData: {
                       "title": "Topcoat",
                       "subtitle": "CSS for clean and fast web apps",
@@ -96,6 +96,7 @@ module.exports = function(grunt) {
                 }
             }
         },
+
         cssmin: {
             minify: {
                 expand: true,
