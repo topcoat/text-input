@@ -38,16 +38,20 @@ body {
 * limitations under the License.
 *
 */
-/*
- Text Input
- ----------
-
-:disabled - Disabled state
-.is-disabled - Simulates a disabled state on mobile devices
-
+/* topdoc
+  name: Text Input
+  description: An input, for text.
+  modifiers:
+    :disabled: Disabled state
+  markup:
     <input type="text" class="topcoat-text-input" value="" placeholder="text">
-    <input type="text" class="topcoat-text-input is-disabled" value="" placeholder="text">
-
+    <input type="text" class="topcoat-text-input" value="" placeholder="text" disabled>
+  tags:
+    - desktop
+    - light
+    - mobile
+    - form
+    - input
 */
 .topcoat-text-input,
 .topcoat-text-input--large {
@@ -73,21 +77,25 @@ body {
   background-color: #fff;
   color: #000;
 }
-.topcoat-text-input:disabled,
-.topcoat-text-input.is-disabled {
+.topcoat-text-input:disabled {
   opacity: 0.3;
   cursor: default;
   pointer-events: none;
 }
-/*
- Large Text Input
- ----------------
-
-:disabled - Disabled state
-.is-disabled - Simulates a disabled state on mobile devices
-
+/* topdoc
+  name: Text Input
+  description: A bigger input, still for text.
+  modifiers:
+    :disabled: Disabled state
+  markup:
     <input type="text" class="topcoat-text-input--large" value="" placeholder="text">
-    <input type="text" class="topcoat-text-input--large is-disabled" value="" placeholder="text">
+    <input type="text" class="topcoat-text-input--large" value="" placeholder="text" disabled>
+  tags:
+    - desktop
+    - light
+    - mobile
+    - form
+    - input
 */
 .topcoat-text-input--large {
   height: 4rem;
@@ -97,8 +105,7 @@ body {
   background-color: #fff;
   color: #000;
 }
-.topcoat-text-input--large.is-disabled,
-.topcoat-text-input--large:disabled {
+.topcoat-text-input--large.is-disabled {
   opacity: 0.3;
   cursor: default;
   pointer-events: none;

@@ -17,19 +17,21 @@
 */
 @import input-mixin
 @import utils
-
-/*
- Text Input
- ----------
-
-:disabled - Disabled state
-.is-disabled - Simulates a disabled state on mobile devices
-
+/* topdoc
+  name: Text Input
+  description: An input, for text.
+  modifiers:
+    :disabled: Disabled state
+  markup:
     <input type="text" class="topcoat-text-input" value="" placeholder="text">
-    <input type="text" class="topcoat-text-input is-disabled" value="" placeholder="text">
-
+    <input type="text" class="topcoat-text-input" value="" placeholder="text" disabled>
+  tags:
+    - desktop
+    - light
+    - mobile
+    - form
+    - input
 */
-
 .topcoat-text-input
   input-base()
   height var-height
@@ -44,21 +46,24 @@
   background-color var-background-color--focus
   color var-color--focus
 
-.topcoat-text-input:disabled,
-.topcoat-text-input.is-disabled
+.topcoat-text-input:disabled
   disabled()
 
-/*
- Large Text Input
- ----------------
-
-:disabled - Disabled state
-.is-disabled - Simulates a disabled state on mobile devices
-
+/* topdoc
+  name: Text Input
+  description: A bigger input, still for text.
+  modifiers:
+    :disabled: Disabled state
+  markup:
     <input type="text" class="topcoat-text-input--large" value="" placeholder="text">
-    <input type="text" class="topcoat-text-input--large is-disabled" value="" placeholder="text">
+    <input type="text" class="topcoat-text-input--large" value="" placeholder="text" disabled>
+  tags:
+    - desktop
+    - light
+    - mobile
+    - form
+    - input
 */
-
 .topcoat-text-input--large
   @extend .topcoat-text-input
   height var-height--large
@@ -68,7 +73,6 @@
   background-color var-background-color--focus
   color var-color--focus
 
-.topcoat-text-input--large.is-disabled,
-.topcoat-text-input--large:disabled
+.topcoat-text-input--large.is-disabled
   disabled()
 
