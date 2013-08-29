@@ -33,13 +33,26 @@
   vertical-align: top;
   outline: none;
 }
+.input:disabled,
+.topcoat-text-input:disabled,
+.topcoat-text-input--large:disabled {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}
 /* topdoc
   name: Text input
   description: Topdoc text input
   markup:
     <input type="text" class="topcoat-text-input" placeholder="text" value="">
+    <br>
+    <br>
     <input type="text" class="topcoat-text-input" placeholder="text" value="" disabled>
+    <br>
+    <br>
     <input type="text" class="topcoat-text-input--large" value="" placeholder="text">
+    <br>
+    <br>
     <input type="text" class="topcoat-text-input--large" value="" placeholder="text" disabled>
   tags:
     - desktop
@@ -49,25 +62,49 @@
 */
 .topcoat-text-input,
 .topcoat-text-input--large {
-  height: 3rem;
+  line-height: 3rem;
+  font-size: 16px;
+  letter-spacing: 1px;
   padding: 0 1.25rem;
-  border: 1px solid rgba(0,0,0,0.36);
+  border: 1px solid #303233;
   -webkit-border-radius: 6px;
   border-radius: 6px;
-  background-color: #595b5b;
+  background-color: #404141;
   -webkit-box-shadow: inset 0 1px rgba(0,0,0,0.18);
   box-shadow: inset 0 1px rgba(0,0,0,0.18);
   color: #c6c8c8;
+  vertical-align: top;
 }
 .topcoat-text-input:focus,
 .topcoat-text-input--large:focus {
-  background-color: #fff;
-  color: #000;
+  background-color: #646666;
+  color: #fff;
   border: 1px solid #0940fd;
   -webkit-box-shadow: 0 0 0 2px #6fb5f1;
   box-shadow: 0 0 0 2px #6fb5f1;
 }
+.topcoat-text-input:disabled::-webkit-input-placeholder {
+  color: #fff;
+}
+.topcoat-text-input:disabled::-moz-placeholder {
+  color: #fff;
+}
+.topcoat-text-input:disabled:-ms-input-placeholder {
+  color: #fff;
+}
 .topcoat-text-input--large {
-  height: 4rem;
+  line-height: 4.375rem;
   font-size: 1.3rem;
+}
+.topcoat-text-input--large:disabled {
+  color: #fff;
+}
+.topcoat-text-input--large:disabled::-webkit-input-placeholder {
+  color: #fff;
+}
+.topcoat-text-input--large:disabled::-moz-placeholder {
+  color: #fff;
+}
+.topcoat-text-input--large:disabled:-ms-input-placeholder {
+  color: #fff;
 }

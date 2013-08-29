@@ -21,8 +21,14 @@
   description: Topdoc text input
   markup:
     <input type="text" class="topcoat-text-input" placeholder="text" value="">
+    <br>
+    <br>
     <input type="text" class="topcoat-text-input" placeholder="text" value="" disabled>
+    <br>
+    <br>
     <input type="text" class="topcoat-text-input--large" value="" placeholder="text">
+    <br>
+    <br>
     <input type="text" class="topcoat-text-input--large" value="" placeholder="text" disabled>
   tags:
     - desktop
@@ -32,25 +38,52 @@
 */
 .topcoat-text-input
   @extend .input
-  height var-height
+  line-height var-height
+  font-size var-font-size
+  letter-spacing var-letter-spacing
   padding var-padding
   border var-border
   border-radius var-border-radius
-  background-color var-background-color
+  background-color var-background-color--text-input
   box-shadow var-box-shadow--down
   color var-color
+  vertical-align var-vertical-align
 
 .topcoat-text-input:focus
-  background-color var-background-color--focus
+  background-color var-background-color--text-input--focus
   color var-color--focus
   border var-border--focus
   box-shadow var-box-shadow--focus
 
+.topcoat-text-input:disabled
+  @extend .input:disabled
+
+.topcoat-text-input:disabled::-webkit-input-placeholder
+  color var-color--focus
+
+.topcoat-text-input:disabled::-moz-placeholder
+  color var-color--focus
+
+.topcoat-text-input:disabled:-ms-input-placeholder
+  color var-color--focus
+
 .topcoat-text-input--large
   @extend .topcoat-text-input
-  height var-height--large
+  line-height var-height--large
   font-size var-font-size--large
 
 .topcoat-text-input--large:focus
   @extend .topcoat-text-input:focus
 
+.topcoat-text-input--large:disabled
+  @extend .input:disabled
+  color var-color--focus
+
+.topcoat-text-input--large:disabled::-webkit-input-placeholder
+  color var-color--focus
+
+.topcoat-text-input--large:disabled::-moz-placeholder
+  color var-color--focus
+
+.topcoat-text-input--large:disabled:-ms-input-placeholder
+  color var-color--focus
