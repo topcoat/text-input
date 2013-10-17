@@ -15,6 +15,7 @@
 * limitations under the License.
 *
 */
+
 .input,
 .topcoat-text-input,
 .topcoat-text-input--large {
@@ -27,12 +28,12 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  -webkit-background-clip: padding;
-  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
   background-clip: padding-box;
   vertical-align: top;
   outline: none;
 }
+
 .input:disabled,
 .topcoat-text-input:disabled,
 .topcoat-text-input--large:disabled {
@@ -40,6 +41,7 @@
   cursor: default;
   pointer-events: none;
 }
+
 /* topdoc
   name: Text input
   description: Topdoc text input
@@ -61,41 +63,47 @@
     - text
     - input
 */
+
 .topcoat-text-input,
 .topcoat-text-input--large {
   line-height: 1.313rem;
   font-size: 12px;
   letter-spacing: 0;
   padding: 0 0.563rem;
-  border: 1px solid #a5a8a8;
-  -webkit-border-radius: 4px;
+  border: 1px solid #9daca9;
   border-radius: 4px;
-  background-color: #d3d7d7;
-  -webkit-box-shadow: inset 0 1px rgba(0,0,0,0.12);
-  box-shadow: inset 0 1px rgba(0,0,0,0.12);
+  background-color: #fff;
+  -webkit-box-shadow: inset 0 1px 0 rgba(0,0,0,0.23);
+  box-shadow: inset 0 1px 0 rgba(0,0,0,0.23);
   color: #454545;
   vertical-align: top;
 }
+
 .topcoat-text-input:focus,
 .topcoat-text-input--large:focus {
-  background-color: #edf1f1;
-  color: #000;
-  border: 1px solid #0940fd;
-  -webkit-box-shadow: 0 0 0 2px #6fb5f1;
-  box-shadow: 0 0 0 2px #6fb5f1;
+  background-color: #fff;
+  color: #454545;
+  border: 1px solid #0036ff;
+  -webkit-box-shadow: inset 0 1px 0 rgba(0,0,0,0.23), 0 0 0 2px #6fb5f1;
+  box-shadow: inset 0 1px 0 rgba(0,0,0,0.23), 0 0 0 2px #6fb5f1;
 }
+
 .topcoat-text-input:disabled::-webkit-input-placeholder {
-  color: #000;
+  color: #454545;
 }
+
 .topcoat-text-input:disabled::-moz-placeholder {
-  color: #000;
+  color: #454545;
 }
+
 .topcoat-text-input:disabled:-ms-input-placeholder {
-  color: #000;
+  color: #454545;
 }
+
 .topcoat-text-input:invalid {
-  border: 1px solid #d83b75;
+  border: 1px solid #ec514e;
 }
+
 /* topdoc
   name: Large Text Input
   description: A bigger input, still for text.
@@ -119,22 +127,28 @@
     - input
     - large
 */
+
 .topcoat-text-input--large {
   line-height: 1.688rem;
   font-size: 0.875rem;
 }
+
 .topcoat-text-input--large:disabled {
-  color: #000;
+  color: #454545;
 }
+
 .topcoat-text-input--large:disabled::-webkit-input-placeholder {
-  color: #000;
+  color: #454545;
 }
+
 .topcoat-text-input--large:disabled::-moz-placeholder {
-  color: #000;
+  color: #454545;
 }
+
 .topcoat-text-input--large:disabled:-ms-input-placeholder {
-  color: #000;
+  color: #454545;
 }
+
 .topcoat-text-input--large:invalid {
-  border: 1px solid #d83b75;
+  border: 1px solid #ec514e;
 }
