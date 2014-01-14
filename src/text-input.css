@@ -15,7 +15,8 @@
 * limitations under the License.
 *
 */
-@import input
+
+@import "topcoat-input-base";
 /* topdoc
   name: Text input
   description: Topdoc text input
@@ -37,39 +38,45 @@
     - text
     - input
 */
-.topcoat-text-input
-  @extend .input
-  line-height var-height
-  font-size var-font-size
-  letter-spacing var-letter-spacing
-  padding var-padding
-  border var-border
-  border-radius var-border-radius
-  background-color var-background-color--text-input
-  box-shadow var-box-shadow--text-input
-  color var-color
-  vertical-align var-vertical-align
+.text-input {
+  extend: %input;
+  line-height: var(height);
+  font-size: var(font-size);
+  letter-spacing: var(letter-spacing);
+  padding: var(padding);
+  border: var(border);
+  border-radius: var(border-radius);
+  background-color: var(background-color--text-input);
+  box-shadow: var(box-shadow--text-input);
+  color: var(color);
+  vertical-align: var(vertical-align);
+}
 
-.topcoat-text-input:focus
-  background-color var-background-color--text-input--focus
-  color var-color--focus
-  border var-border--focus
-  box-shadow var-box-shadow--text-input, var-box-shadow--focus
+.text-input:focus {
+  background-color: var(background-color--text-input--focus);
+  color: var(color--focus);
+  border: var(border--focus);
+  box-shadow: var(box-shadow--text-input), var(box-shadow--focus);
+}
 
-.topcoat-text-input:disabled
-  @extend .input:disabled
+.text-input:disabled {
+  extend: %input--disabled;
+}
 
-.topcoat-text-input:disabled::-webkit-input-placeholder
-  color var-color--focus
+.text-input:disabled::-webkit-input-placeholder {
+  color: var(color--focus);
+}
 
-.topcoat-text-input:disabled::-moz-placeholder
-  color var-color--focus
+.text-input:disabled::-moz-placeholder {
+  color: var(color--focus);
+}
 
-.topcoat-text-input:disabled:-ms-input-placeholder
-  color var-color--focus
-
-.topcoat-text-input:invalid
-  border var-border--invalid
+.text-input:disabled:-ms-input-placeholder {
+  color: var(color--focus);
+}
+.text-input:invalid{
+  border: var(border--invalid);
+}
 
 /* topdoc
   name: Large Text Input
@@ -94,26 +101,33 @@
     - input
     - large
 */
-.topcoat-text-input--large
-  @extend .topcoat-text-input
-  line-height var-height--large
-  font-size var-font-size--large
+.text-input--large {
+  extend: .text-input;
+  line-height: var(height--large);
+  font-size: var(font-size--large);
+}
 
-.topcoat-text-input--large:focus
-  @extend .topcoat-text-input:focus
+.text-input--large:focus {
+  extend: .text-input:focus;
+}
 
-.topcoat-text-input--large:disabled
-  @extend .input:disabled
-  color var-color--focus
+.text-input--large:disabled {
+  extend: .text-input:disabled;
+  color: var(color--focus);
+}
 
-.topcoat-text-input--large:disabled::-webkit-input-placeholder
-  color var-color--focus
+.text-input--large:disabled::-webkit-input-placeholder {
+  color: var(color--focus);
+}
 
-.topcoat-text-input--large:disabled::-moz-placeholder
-  color var-color--focus
+.text-input--large:disabled::-moz-placeholder {
+  color: var(color--focus);
+}
 
-.topcoat-text-input--large:disabled:-ms-input-placeholder
-  color var-color--focus
+.text-input--large:disabled:-ms-input-placeholder {
+  color: var(color--focus);
+}
 
-.topcoat-text-input--large:invalid
-  border var-border--invalid
+.text-input--large:invalid {
+  border: var(border--invalid);
+}
